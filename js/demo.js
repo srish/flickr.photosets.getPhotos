@@ -17,8 +17,6 @@ $(function () {
         jsonp: 'jsoncallback'
     }).done(function (result) {
 
-        console.log(result.photoset);
-
         var linksContainer = $('#links'),
             baseUrl;
 
@@ -27,8 +25,6 @@ $(function () {
             
             baseUrl = 'https://farm' + photo.farm + '.static.flickr.com/' +
                 photo.server + '/' + photo.id + '_' + photo.secret;
-
-            console.log(baseUrl);
 
             $('<a/>')
                 .append($('<img>').prop('src', baseUrl + '_s.jpg'))
